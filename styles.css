@@ -119,9 +119,9 @@ main h2 {
     text-align: center;
 }
 
-.entrada h3 {
+.entrada h3 h4{
     margin: 10px 0;
-
+    text-align: left;
 }
 
 .entrada p {
