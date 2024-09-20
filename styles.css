@@ -1,0 +1,375 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #5b0100;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header.portada {
+    /*background-image: url('imagenes/Galvarino13.jpg');*/
+    background-color: #eeeee4;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 10px 0;
+    color: #873e23;
+    height: 100px;
+}
+
+header.portada h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header.portada p {
+    font-size: 1.5em;
+}
+
+/* Slider de imágenes */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.slider .slide.active {
+    opacity: 1;
+}
+
+/* Layout responsivo */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+}
+
+main h2 {
+    color: #333;
+}
+
+/* Contenedor de las últimas entradas */
+.ultimas-entradas {
+    margin: 20px 0;
+}
+
+.ultimas-entradas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grilla para las entradas */
+.grilla-entradas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño igual */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+/* Estilos para cada entrada */
+.entrada {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.entrada img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.entrada h3 {
+    margin: 10px 0;
+}
+
+.entrada p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Estilo para el contenedor del mapa */
+        .mapa-container {
+            width: 100%;
+            height: 500px; /* Ajusta la altura del mapa según tu preferencia */
+            margin: 20px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+/* Opcional: Estilo para centrar el mapa en su contenedor */
+        .mapa-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+/* Diseño responsivo */
+@media (max-width: 767px) {
+    .grilla-entradas {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grilla-entradas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+.comentarios {
+    background-color: white;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h2 {
+    margin-bottom: 15px;
+}
+
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios label {
+    margin-top: 10px;
+}
+
+.comentarios input, .comentarios textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comentarios button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eab676;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.lista-comentarios {
+    margin-top: 20px;
+}
+
+.lista-comentarios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-comentarios ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Barra lateral responsiva */
+
+/* Elementos de la barra lateral */
+.buscador input {
+    width: 100%; /* Aseguramos que ocupe el 100% del ancho de la barra lateral */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+}
+
+.buscador button {
+    width: 100%;
+    padding: 10px;
+    background-color: #eab676;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el botón no exceda el ancho */
+}
+
+aside {
+    background-color: #e4e4e4;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.buscador button {
+    width: 100%;
+    padding: 10px;
+    background-color: #eab676;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.ultimas-entradas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ultimas-entradas ul li {
+    margin-bottom: 10px;
+}
+
+.ultimas-entradas ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.fecha-actual p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.calendario {
+    margin-top: 20px;
+}
+
+/* Calendario en la barra lateral */
+.calendario {
+    margin-top: 20px;
+    width: 100%; /* Aseguramos que el calendario se ajuste al contenedor */
+}
+
+.calendario table {
+    width: 100%; /* Ocupa el 100% del ancho de la barra lateral */
+    border-collapse: collapse; /* Eliminamos los espacios entre celdas */
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.calendario th, .calendario td {
+    padding: 5px; /* Reducimos el padding para compactar el calendario */
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9em; /* Reducimos el tamaño de la fuente para ahorrar espacio */
+}
+
+.calendario th {
+    background-color: #eab676;
+    color: white;
+    font-size: 1em; /* Tamaño de texto más pequeño para los encabezados */
+}
+
+.calendario td {
+    background-color: #f9f9f9;
+    width: 14.28%; /* Ajustamos el ancho de cada celda para que el calendario sea más compacto */
+}
+
+/* Responsive calendar adjustments */
+@media (max-width: 767px) {
+    .calendario th, .calendario td {
+        padding: 3px; /* Aún más pequeño en pantallas pequeñas */
+        font-size: 0.8em; /* Disminuimos el tamaño del texto en móviles */
+    }
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Consultas de medios para hacerlo responsivo */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 25%;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header.portada h1 {
+        font-size: 2.5em;
+    }
+
+    header.portada p {
+        font-size: 1.2em;
+    }
+
+    .comentarios, .entrada {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .comentarios input, .comentarios textarea, .comentarios button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .calendario th, .calendario td {
+        padding: 5px;
+    }
+}
