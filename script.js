@@ -33,7 +33,7 @@ fechaElement.textContent = fechaActual;
 // Generar dinámicamente el calendario para el mes actual
 const calendarBody = document.getElementById('calendar-body');
 
-function generarCalendario() {
+/*function generarCalendario() {
     const fechaActual = new Date();
     const mesActual = fechaActual.getMonth(); // Mes actual (0-11)
     const anoActual = fechaActual.getFullYear(); // Año actual
@@ -64,4 +64,61 @@ function generarCalendario() {
     calendarBody.innerHTML = filas;
 }
 
-generarCalendario();
+generarCalendario();*/
+
+function generateCalendar() {
+    const today = new Date();
+    const currentMonth = today.getMonth(); // Mes actual
+    const currentYear = today.getFullYear(); // Año actual
+    const currentDay = today.getDate(); // Día actual
+
+    // Obtener el primer día del mes
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay(); 
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    const calendarBody = document.getElementById('calendar-body');
+    calendarBody.innerHTML = '';
+
+    let date = 1;
+
+    // Crear las filas del calendario (6 filas son suficientes para cualquier mes)
+    for (let i = 0; i < 6; i++) {
+        const row = document.createElement('tr');
+
+        // Crear 7 columnas (una para cada día de la semana)
+        for (let j = 0; j < 7; j++) {
+            const cell = document.createElement('td');
+
+            // Rellenar las celdas en blanco antes del primer día del mes
+            if (i === 0 && j < (firstDay === 0 ? 6 : firstDay - 1)) {
+                const emptyCell = document.createTextNode('');
+                cell.appendChild(emptyCell);
+                row.appendChild(cell);
+            } else if (date > daysInMonth) {
+                // Salir si ya no hay más días en el mes
+                break;
+            } else {
+                const cellText = document.createTextNode(date);
+
+                // Destacar el día actual
+                if (date === currentDay) {
+                    cell.classList.add('current-day');
+                }
+
+                // Hacer los domingos rojos
+                if (j === 6) {
+                    cell.classList.add('sunday');
+                }
+
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+                date++;
+            }
+        }
+
+        calendarBody.appendChild(row);
+    }
+}
+
+// Llamar a la función para generar el calendario al cargar la página
+generateCalendar();
