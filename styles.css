@@ -112,7 +112,8 @@ main h2 {
 }
 
 .entrada img {
-    width: 100%;
+    width: auto;
+    max-height: 200px;
     height: auto;
     border-radius: 5px;
 }
