@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Ciudad de Galvarino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Gobierno</a></li>
+            <li><a href="#">Comercio</a></li>
+            <li><a href="#">Educación</a></li>
+            <li><a href="#">Salud</a></li>
+            <li><a href="#">Iglesia</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Fotos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Imagen de cabecera como portada -->
+    <header class="portada">
+        <h1>Educación</h1>
+    </header>
+
+    <!-- Sección de imágenes rotativas 
+    <section class="slider">
+        <div class="slide active" style="background-image: url('imagenes/Galvarino4.jpg');"></div>
+        <div class="slide" style="background-image: url('imagenes/Galvarino5.jpg');"></div>
+        <div class="slide" style="background-image: url('imagenes/Galvarino6.jpg');"></div>
+        <div class="slide" style="background-image: url('imagenes/Galvarino14.jpg');"></div>
+    </section>-->
+
+    <div class="container">
+        <!-- Sección principal -->
+        <main>
+             <!--<h3>Selecciona una opción para ver más detalles:</h3>
+
+             Cuadro de lista desplegable 
+            <select id="dataSelect" onchange="mostrarDatos()">
+                <option value="">Selecciona una opción</option>
+                <option value="opcion1">Establecimientos Municipales</option>
+                <option value="opcion2">Establecimientos Junji VTF</option>
+                <option value="opcion3">Establecimientos Particulares</option>
+            </select>-->
+            
+            <!-- Divs para mostrar los datos de acuerdo a la selección 
+            <div id="opcion1" class="info">
+                <h4>Establecimientos Municipales</h4>
+                <p> <ul>
+                        <li><a href="#">Escuela Rio Quillem</a></li>
+                        <li><a href="#">Escuela Gabriela Mistral</a></li>
+                        <li><a href="#">Escuela Trabunquillem</a></li>
+                        <li><a href="#">Escuela Quetre</a></li>
+                        <li><a href="#">Escuela La Piedra</a></li>
+                    </ul>
+                </p>
+            </div>
+
+            <div id="opcion2" class="info">
+                <h4>Información de Opción 2</h4>
+                <p>Este es el contenido de la Opción 2.</p>
+            </div>
+
+            <div id="opcion3" class="info">
+                <h4>Información de Opción 3</h4>
+                <p>Este es el contenido de la Opción 3.</p>
+            </div>-->
+            <article class="entrada">
+                <img src="imagenes/estudiantes.jpg" alt="Estudiantes" class="img-entrada">
+                <h3 id="concejal">ESTABLECIMIENTOS EDUCACIONALES MUNICIPALES</h3>
+
+                <p>Los siguientes son establecimientos educacionales dependientes del municipio:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="30%">Establecimiento</th>
+                            <th width="15%">RBD</th>
+                            <th width="55%">Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blogPosts">
+                        <tr class="post">
+                            <td>Liceo Gregorio Urrutia</td>
+                            <td></td>
+                            <td>Freire S/N, acceso sur a Galvarino</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Gabriela Mistral</td>
+                            <td></td>
+                            <td>Los Laureles 910</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Rio Quillem</td>
+                            <td></td>
+                            <td>Caupolicán 55</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Especial Dame la Mano</td>
+                            <td></td>
+                            <td>Chacabuco esquina Matta</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela La Piedra</td>
+                            <td></td>
+                            <td>Camino La Piedra Km. 8</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Trabunquillem</td>
+                            <td></td>
+                            <td>Sector rural</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Quetre </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Chacaico</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Mañiuco</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Quinahue</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Huampomallin</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Aillinco</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Santa Sargarita</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Trif-trifco</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Pelantaro</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Pangueco</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Nilpe</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Llufquentúe</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Rucatraro</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela El Capricho</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Fortin Ñielol</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="entrada">
+                <img src="imagenes/estudiantes.jpg" alt="Estudiantes" class="img-entrada">
+                <h3 id="concejal">ESTABLECIMIENTOS JUNJI VTF</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="40%">Establecimiento</th>
+                            <th width="60%">Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blogPosts">
+                        <tr class="post">
+                            <td>Jardin Infantil Rayito de Sol</td>
+                            <td>Los Laureles al lado de Esc. Gabriela Mistral</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Jardín Infantil Amulén</td>
+                            <td>Sector rural camino Aillinco</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Jardín Infantil Antuliwén</td>
+                            <td>Camino La Piedra Km. 8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="entrada">
+                <img src="imagenes/estudiantes.jpg" alt="Estudiantes" class="img-entrada">
+                <h3 id="concejal">ESTABLECIMIENTOS EDUCACIONALES PARTICULARES</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="40%">Establecimiento</th>
+                            <th width="60%">Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blogPosts">
+                        <tr class="post">
+                            <td>Liceo Juan Pablo II</td>
+                            <td>Independencia al lado de la Municipalidad</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Yaima</td>
+                            <td>Sector rural</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Escuela Adventista Corrientes Blancas</td>
+                            <td>Corrientes Blancas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="buscador">
+                <h3>Buscar en el blog</h3>
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button onclick="buscar()">Buscar...</button>
+            </div>
+
+            <div class="ultimas-entradas">
+                <h3>Últimas Entradas</h3>
+                <ul>
+                    <li><a href="blog.html#alcalde">Candidatos a Alcalde en Galvarino</a></li>
+                    <li><a href="blog.html#concejal">Candidatos a Concejal en Galvarino</a></li>
+                    <li><a href="blog.html#elecciones">Elecciones 2024</a></li>
+                    <!--<li><a href="#">Entrada 4</a></li>
+                    <li><a href="#">Entrada 5</a></li>-->
+                </ul>
+            </div>
+            <div class="ultimas-entradas">
+                <h3>Páginas</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Gobierno</a></li>
+                    <li><a href="#">Comercio</a></li>
+                    <li><a href="#">Educación</a></li>
+                    <li><a href="#">Salud</a></li>
+                    <li><a href="#">Iglesias</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Fotos</a></li>
+                </ul>
+            </div>
+
+            <div class="fecha-actual">
+                <h3>Fecha Actual</h3>
+                <p id="fecha"></p>
+            </div>
+
+            <div class="calendario">
+                <h3>Calendario de Septiembre</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mié</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Aquí se generará el calendario dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Blog de Galvarino. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
