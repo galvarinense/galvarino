@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #5b0100;
+    background-color: #2471A3;
     padding: 1em;
     text-align: center;
 }
@@ -95,6 +95,15 @@ main h2 {
     margin-bottom: 20px;
 }
 
+/* Estilo para busquedas */
+.post {
+            margin: 20px 0;
+   }
+.hidden {
+            display: none;
+}
+
+
 /* Grilla para las entradas */
 .grilla-entradas {
     display: grid;
@@ -171,7 +180,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #2471A3;
     color: white;
 }
 
@@ -274,7 +283,7 @@ tr:nth-child(even) {
 .buscador button {
     width: 100%;
     padding: 10px;
-    background-color: #eab676;
+    background-color: #2471A3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -350,7 +359,7 @@ aside {
 }
 
 .calendario th {
-    background-color: #eab676;
+    background-color: #2471A3;
     color: white;
     font-size: 1em; /* Tamaño de texto más pequeño para los encabezados */
 }
