@@ -110,6 +110,17 @@ main h2 {
     object-fit: cover;
 }
 
+/* Estilo para listas desplegables */
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none; /* Ocultar inicialmente */
+        }
+
+
 
 /* Estilos para cada entrada */
 .entrada {
@@ -396,7 +407,7 @@ footer p {
     nav ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     nav ul li {
