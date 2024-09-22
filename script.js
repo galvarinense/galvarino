@@ -30,41 +30,26 @@ const fechaActual = hoy.toLocaleDateString('es-ES', {
 fechaElement.textContent = fechaActual;
 
 
-// Generar dinámicamente el calendario para el mes actual
-const calendarBody = document.getElementById('calendar-body');
+// Mostrar listas desplegables
 
-/*function generarCalendario() {
-    const fechaActual = new Date();
-    const mesActual = fechaActual.getMonth(); // Mes actual (0-11)
-    const anoActual = fechaActual.getFullYear(); // Año actual
-    const primerDia = new Date(anoActual, mesActual, 1).getDay(); // Primer día del mes (0-6)
-    const diasMes = new Date(anoActual, mesActual + 1, 0).getDate(); // Total de días en el mes actual
-
-    let filas = '';
-    let dia = 1;
-
-    // Ajustar para que el primer día de la semana sea lunes (0 = lunes)
-    const primerDiaCorregido = (primerDia === 0) ? 6 : primerDia - 1;
-
-    for (let semana = 0; semana < 6; semana++) {
-        filas += '<tr>';
-        for (let i = 0; i < 7; i++) {
-            if (semana === 0 && i < primerDiaCorregido) {
-                filas += '<td></td>'; // Días vacíos antes del primer día del mes
-            } else if (dia > diasMes) {
-                filas += '<td></td>'; // Días vacíos después de que el mes termine
-            } else {
-                filas += `<td>${dia}</td>`;
-                dia++;
-            }
+    function mostrarDatos() {
+        // Obtener el valor seleccionado
+        var seleccion = document.getElementById("dataSelect").value;
+        
+        // Ocultar todas las secciones de información
+        var infoBoxes = document.getElementsByClassName("info");
+        for (var i = 0; i < infoBoxes.length; i++) {
+            infoBoxes[i].style.display = "none";
         }
-        filas += '</tr>';
+        
+        // Mostrar la sección correspondiente al valor seleccionado
+        if (seleccion) {
+            document.getElementById(seleccion).style.display = "block";
+        }
     }
 
-    calendarBody.innerHTML = filas;
-}
-
-generarCalendario();*/
+// Generar dinámicamente el calendario para el mes actual
+const calendarBody = document.getElementById('calendar-body');
 
 function generateCalendar() {
     const today = new Date();
@@ -122,3 +107,21 @@ function generateCalendar() {
 
 // Llamar a la función para generar el calendario al cargar la página
 generateCalendar();
+
+// buscar en la pagina
+function buscar() {
+        // Obtener el valor de búsqueda
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        
+        // Obtener todas las entradas del blog
+        var posts = document.querySelectorAll('.post');
+        
+        // Iterar sobre las entradas y filtrar
+        posts.forEach(function(post) {
+            if (post.innerText.toLowerCase().includes(input)) {
+                post.classList.remove('hidden'); // Mostrar si coincide
+            } else {
+                post.classList.add('hidden'); // Ocultar si no coincide
+            }
+        });
+    }
