@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Ciudad de Galvarino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Gobierno</a></li>
+            <li><a href="#">Comercio</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="#">Salud</a></li>
+            <li><a href="#">Iglesias</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Fotos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Imagen de cabecera como portada -->
+    <header class="portada">
+        <h1>Educación</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sección principal -->
+        <main>
+            <article class="entrada">
+                <img src="imagenes/estudiantes.jpg" alt="Estudiantes" class="img-entrada">
+                <h3 id="muncipales">ACTIVIDAD COMERCIAL</h3>
+
+                <p>Los siguientes rubros están disponibles en Galvarino:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="100%">Rubro o actividad</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="blogPosts">
+                        <tr class="post">
+                            <td>Abogados</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Almacenes o Minimarket</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Arriendo de Maquinaria</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Aserraderos</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Bencineras</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Carpintería</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Casas Prefabricadas</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Comida a Domicilio</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Confección de Vestuario</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Distribuidores de Gas Licuado</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Fabricación de Estructuras en Aluminio</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Farmacias</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Ferreterías</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Peluquerías</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Restaurantes</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Servicios Funerarios</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Supermercados</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Talleres para Automóviles</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Tiendas</td>
+                        </tr>
+                        <tr class="post">
+                            <td>Transporte</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </main>
+
+        <!-- Barra lateral -->
+        <aside>
+            <div class="buscador">
+                <h3>Buscar en el blog</h3>
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button onclick="buscar()">Buscar...</button>
+            </div>
+
+            <div class="ultimas-entradas">
+                <h3>Últimas Entradas</h3>
+                <ul>
+                    <li><a href="blog.html#alcalde">Candidatos a Alcalde en Galvarino</a></li>
+                    <li><a href="blog.html#concejal">Candidatos a Concejal en Galvarino</a></li>
+                    <li><a href="blog.html#elecciones">Elecciones 2024</a></li>
+                    <!--<li><a href="#">Entrada 4</a></li>
+                    <li><a href="#">Entrada 5</a></li>-->
+                </ul>
+            </div>
+            <div class="ultimas-entradas">
+                <h3>Páginas</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Gobierno</a></li>
+                    <li><a href="#">Comercio</a></li>
+                    <li><a href="educacion.html">Educación</a></li>
+                    <li><a href="#">Salud</a></li>
+                    <li><a href="#">Iglesias</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Fotos</a></li>
+                </ul>
+            </div>
+
+            <div class="fecha-actual">
+                <h3>Fecha Actual</h3>
+                <p id="fecha"></p>
+            </div>
+
+            <div class="calendario">
+                <h3>Calendario de Septiembre</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mié</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Aquí se generará el calendario dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Blog de Galvarino. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
