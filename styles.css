@@ -27,6 +27,33 @@ nav ul li a {
     text-decoration: none;
 }
 
+/*.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+}
+
+.menu li {
+    flex: 1;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background-color: #555;
+}
+*/
+.icon {
+    display: none;
+}
 header.portada {
     /*background-image: url('imagenes/Galvarino13.jpg');*/
     background-color: #eeeee4;
@@ -216,55 +243,31 @@ tr:nth-child(even) {
     }
 }
 
-.comentarios {
-    background-color: white;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+@media (max-width: 600px) {
+    .menu {
+        display: none; /* oculta el menu en pantallas pequeñas */
+        flex-direction: column;
+        text-align: left;
+    }
 
-.comentarios h2 {
-    margin-bottom: 15px;
-}
+    /* muestra menu */
+    .menu.responsive {
+        display: flex;
+    }
+    
+    .menu li {
+        flex: none;
+    }
 
-.comentarios form {
-    display: flex;
-    flex-direction: column;
-}
+    .icon {
+        display: block;
+        font-size: 30px;
+        color: white;
+        padding: 15px;
+        /*background-color: #333;*/
+        text-align: left;
 
-.comentarios label {
-    margin-top: 10px;
-}
-
-.comentarios input, .comentarios textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.comentarios button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #eab676;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 100px;
-}
-
-.lista-comentarios {
-    margin-top: 20px;
-}
-
-.lista-comentarios ul {
-    list-style: none;
-    padding: 0;
-}
-
-.lista-comentarios ul li {
-    margin-bottom: 10px;
+    }    
 }
 
 
